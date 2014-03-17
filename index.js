@@ -19,7 +19,7 @@ module.exports = function (node) {
 		main = main.property;
 	}
 
-	if (main && main.type === 'Identifier' && main.name === 'console' && expression.property) {
+	if (main && main.type === 'Identifier' && main.name === 'assert' && expression.property) {
 		updateNode(node, 'void 0');
 	}
 };
